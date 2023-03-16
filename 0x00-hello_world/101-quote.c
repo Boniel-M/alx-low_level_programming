@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * main - Learning write function, escape using \
- * Return: return to null
+ * main - Learning write function, escape using
+ * Return: returns to null
  */
 int main(void)
 {
