@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
  * main - Learning write function, escape using \
  * Return: return to 1.
