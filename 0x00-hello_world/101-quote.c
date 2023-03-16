@@ -2,7 +2,7 @@
 #include <unistd.h>
 /**
  * main - Learning write function, escape using \
- * Return: return to success
+ * Return: return to null
  */
 int main(void)
 {
