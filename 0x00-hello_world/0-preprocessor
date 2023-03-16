@@ -1,2 +1,2 @@
 #!/bin/bash
-CFILE=main.c ./0-preprocessor
+CFILE="./0-preprocessor"
