@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - This runs puts C
- * return - returns sucess
+ * return: returns sucess
  */
 int main(void)
 {
