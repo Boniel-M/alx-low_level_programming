@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - This is a main function.
- * return - value to null.
+ * return - returns value of main to (0) null.
  *
  */
 
