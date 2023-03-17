@@ -6,17 +6,16 @@
  */
 int main(void)
 {
-	int i;
+	int i = 1;
 
-	for (i = 0; i < 9; i++)
+	putcher('1');
+	while (1 < 9) 
 	{
-		putchar(i + '1');
 		putchar(',');
 		putchar(' ');
-
+		i++;
+		putchar(i + '0');
 	}
-
-		putchar('9');
-		putchar('\n');
-		return (0);
+	putchar('\n');
+	return (0);
 }
