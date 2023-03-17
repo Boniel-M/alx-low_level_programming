@@ -3,9 +3,7 @@
 #include <stdio.h>
 /**
  * main - This is a main function
- *
- * betty style doc for function main goes there
- * Return - Returns value.
+ * Return - Returns value of success
  */
 
 
@@ -15,16 +13,16 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	printf(" ");
+	printf("");
 	scanf("%d", &n);
 
 	if (n > 0)
-		printf("%d is positive\n", n);
+		printf("%dis positive\n", n);
 
 	else if (n < 0)
-		printf("%d is negative", n);
+		printf("%dis negative", n);
 
 	else
-		printf("%d is zero\n", n);
+		printf("%dis zero\n", n);
 	return (0);
 }
