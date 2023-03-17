@@ -8,11 +8,12 @@ int main(void)
 {
 	int ch;
 
-	for (ch = 'a'; ch <= 'z'; ch++) {
-	for (ch == 'e' || ch = 'q');
-	continue;}
-		putchar(ch);
+	for (ch = 'a'; ch <= 'z'; ch++){
+		if (ch == 'e' || ch = 'q');
+		continue;
+	}
+	putchar(ch);
 
-	putchar("ch\n")
+	putchar("\n")
 		return (0);
 }
