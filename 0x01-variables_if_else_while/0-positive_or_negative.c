@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * main - This is a main function
- * Return - Returns value of success
+ * Return: Returns value of success
  */
 
 
