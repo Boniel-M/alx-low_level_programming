@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
-
+/* main -  more headers goes there */
+/* Return - value returns to 0 */
 /* betty style doc for function main goes there */
 int main(void)
 {
@@ -9,13 +9,18 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	int n;
-	n = N;
-	do(N = 0; N < 0; n++)
 {
-		printf("d%\n", N);
-		N++
+		printf("Enter a Random Number: ")
+		scanf("%d", &n);
 }
-	while (N < 0);
-	return (0);
+	if (n > 0) {
+		printf("%d is positive\n");
+}
+	else if(n < 0) {
+		printf("%d is negative")
+}
+	else {
+		print("%d is zero")
+}
+		return (0);
 }
