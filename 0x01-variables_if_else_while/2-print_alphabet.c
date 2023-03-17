@@ -2,7 +2,7 @@
 /**
  * main - This is a main function.
  *
- * Return - returns value of main to (0) null.
+ * Return: returns value success.
  *
  */
 
