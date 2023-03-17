@@ -1,9 +1,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* main - This is a main function */
-/* Return - Returns value 0 */
-/* betty style doc for function main goes there */
+/**
+ * main - This is a main function
+ *
+ * betty style doc for function main goes there
+ * Return - Returns value.
+ */
+
 
 int main(void)
 {
@@ -11,7 +15,7 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	printf("Enter a integer: ");
+	printf(" ");
 	scanf("%d", &n);
 
 	if (n > 0)
