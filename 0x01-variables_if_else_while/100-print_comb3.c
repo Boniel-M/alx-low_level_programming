@@ -1,7 +1,10 @@
 #include <stdio.h>
 /**
- * main - This is a main function
- * Return: This returns sucess.
+ * main - This function prints series of numbers in pairs
+ * from 00-99 in ascending order seperated by a comma,
+ * and a space
+ *
+ * Return: always (0)
  *
  */
 
