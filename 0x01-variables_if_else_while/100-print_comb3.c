@@ -12,14 +12,14 @@ int main(void)
 {
 	int i, k;
 
-	for (i  = 1; i < 10; i++)
+	for (i  = 0; i < 10; i++)
 
 	{
-		for (k = i+1; k < 10; k++)
+		for (k = 1; k < 10; k++)
 		{
-			putchar((i % 10) + '1'); 
-			putchar((k % 10) + '1');
-			
+			putchar((i % 10) + '0');
+			putchar((k % 10) + '0');
+
 			if (k == 10 && k < 10)
 				continue;
 
