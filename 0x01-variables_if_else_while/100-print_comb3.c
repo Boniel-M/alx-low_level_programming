@@ -20,7 +20,7 @@ int main(void)
 			putchar((i % 10) + '0');
 			putchar((k % 10) + '0');
 
-			if (k == 10 && k < 10)
+			if (k == 8 && k < 8)
 				continue;
 
 		putchar(' ');
