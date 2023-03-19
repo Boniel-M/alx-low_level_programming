@@ -12,13 +12,13 @@ int main(void)
 {
 	int i, k;
 
-	for (i  = 0; i < 9; i++)
+	for (i  = 0; i <= 9; i++)
 
 	{
-		for (k = i + 1; k <= 9; k++)
+		for (k = i + 1; k <= 8; k++)
 		{
-			putchar((i % 10) + '0');
-			putchar((k % 10) + '0');
+			putchar((i % 9) + '0');
+			putchar((k % 9) + '0');
 
 			if (k != 8 || k != 9)
 				continue;
