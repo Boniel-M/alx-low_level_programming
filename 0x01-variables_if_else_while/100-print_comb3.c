@@ -12,13 +12,13 @@ int main(void)
 {
 	int i, k;
 
-	for (i  = 01; i < 10; i++)
+	for (i  = 1; i < 10; i++)
 
 	{
-		for (k = i+01; k < 10; k++)
+		for (k = i+1; k < 10; k++)
 		{
-			putchar((i % 10) + '01'); 
-			putchar((k % 10) + '01');
+			putchar((i % 10) + '1'); 
+			putchar((k % 10) + '1');
 			
 			if (k == 10 && k < 10)
 				continue;
