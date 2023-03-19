@@ -12,15 +12,15 @@ int main(void)
 {
 	int i, k;
 
-	for (i  = 0; i < 10; i++)
+	for (i  = 0; i < 9; i++)
 
 	{
-		for (k = 1; k < 10; k++)
+		for (k = 1; k < 9; k++)
 		{
 			putchar((i % 10) + '0');
 			putchar((k % 10) + '0');
 
-			if (k == 8 && k < 8)
+			if (k == 9 && k < 9)
 				continue;
 
 		putchar(' ');
