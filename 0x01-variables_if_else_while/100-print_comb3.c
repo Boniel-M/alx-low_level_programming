@@ -21,9 +21,10 @@ int main(void)
 			putchar(k + '0');
 
 			if (k != 8 || k != 9)
+				continue;
 
-				putchar(' ');
 				putchar(',');
+				putchar(' ');
 		}
 	}
 	putchar('\n');
