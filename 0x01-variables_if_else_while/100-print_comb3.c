@@ -18,8 +18,8 @@ int main(void)
 		for (k = 0; k < 10; k++)
 		
 		{
-			putchar((i % ) + '0'); 
-			putchar((k % ) + '0');
+			putchar((i % 10) + '0'); 
+			putchar((k % 10) + '0');
 			
 			if (k == 9 && k < 9)
 				continue;
