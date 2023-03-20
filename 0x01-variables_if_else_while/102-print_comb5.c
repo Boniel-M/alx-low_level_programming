@@ -14,26 +14,18 @@ int main(void)
 
 	for (i = 0; i <= 99; i++)
 	{
-		for (k = 0; k <= 99; k++)
+		for (k = i; k <= 99; k++)
 		{
-			putchar(i + '0');
-			putchar(k + '0');
+			putchar(i / 10 + '0');
+			putchar(i % 10 + '0');
+			putchar(' ');
+			putchar(k / 10 + '0');
+			putchar(k % 10 + '0');
 			if (i != 99 || k != 99)
-				continue;
 		}
-	{
-		putchar(' ');
-	}
-	for (i = 0; i <= 99; i++)
-		for (k = i + 1; k <= 99; k++)
 		{
-			putchar(i + '0');
-			putchar(k + '0');
-			if (i != 99 || k != 99)
-
-	{	putchar(',');
-		putchar(' ');
-	}
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
