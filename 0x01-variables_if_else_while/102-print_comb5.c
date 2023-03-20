@@ -12,24 +12,24 @@ int main(void)
 {
 	int i, k;
 
-	for (i = 0; i <= 9; i++)
+	for (i = 0; i <= 99; i++)
 	{
-		for (k = 0; k<= 9; k++)
+		for (k = 0; k <= 99; k++)
 		{
 			putchar(i + '0');
 			putchar(k + '0');
-			if (i != 9 || k != 9)
+			if (i != 99 || k != 99)
 				continue;
 		}
 	{
 		putchar(' ');
 	}
-	for (i = 0; i <= 9; i++)
-		for (k = i + 1; k <= 9; k++ )
+	for (i = 0; i <= 99; i++)
+		for (k = i + 1; k <= 99; k++)
 		{
 			putchar(i + '0');
 			putchar(k + '0');
-			if (i != 9 || k != 9)
+			if (i != 99 || k != 99)
 				continue;
 		}
 	{	putchar(',');
