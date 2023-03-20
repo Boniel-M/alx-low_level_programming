@@ -14,7 +14,9 @@ int main(void)
 	{
 		for (j = 1; j <= 7; j++)
 		{
-			for (k = 3; k <= 8;)
+			for (k = 3; k <= 8; k++)
+			{
+				if (j > i < k)
 		{
 			putchar(i + '0');
 			putchar(j + '0');
@@ -26,6 +28,7 @@ int main(void)
 			putchar(' ');
 		}
 		}
+			}
 		}
 
 	}
