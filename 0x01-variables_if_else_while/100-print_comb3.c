@@ -22,15 +22,15 @@ int main(void)
 				putchar(i + '0');
 				putchar(k + '0');
 				if (i != 8 || k != 9)
-			
 
-			{
-				putchar(',');
-				putchar(' ');
-			}
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
+
 	putchar('\n');
 	return (0);
 }
