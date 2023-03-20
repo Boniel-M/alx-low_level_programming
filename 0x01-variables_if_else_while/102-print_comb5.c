@@ -14,20 +14,25 @@ int main(void)
 
 	for (i = 0; i < 100; i++)
 	{
-		for (k = i; k < 100; k++)
-		{
 			putchar(i / 10 + '0');
 			putchar(i % 10 + '0');
 			putchar(' ');
+			for (k = i+1; k < 100; k++)	
+		{
 			putchar(k / 10 + '0');
 			putchar(k % 10 + '0');
-			if (i != 99 || k != 99)
-		{
-			putchar(',');
-			putchar(' ');
-		}
+			if (i == 99 && k == 99)
+
+			{
+				putchar('\n');
+			}
+			else
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
-	putchar('\n');
+
 	return (0);
 }
