@@ -16,7 +16,7 @@ int main(void)
 		{
 			for (k = 3; k <= 8; k++)
 			{
-				if (j > i < k)
+				if (j > i && i < k)
 		{
 			putchar(i + '0');
 			putchar(j + '0');
