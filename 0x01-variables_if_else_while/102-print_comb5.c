@@ -30,7 +30,6 @@ int main(void)
 			putchar(i + '0');
 			putchar(k + '0');
 			if (i != 99 || k != 99)
-				continue;
 		}
 	{	putchar(',');
 		putchar(' ');
