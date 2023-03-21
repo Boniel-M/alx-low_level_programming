@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
+ * main - prints and checks alphabetical code
  *
+ * Return: Returns 0 always.
  *
  *
  */
 
-int main(void)
 {
 	char c;
 	c = 'a';
