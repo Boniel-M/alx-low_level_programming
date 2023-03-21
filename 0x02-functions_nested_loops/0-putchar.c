@@ -1,6 +1,3 @@
-#ifndef main_h
-#define main_h
-
 #include <stdio.h>
 /**
  * main - prints _putchar followed by a new line.
@@ -10,16 +7,18 @@
 
 int main(void)
 
-#endif /* main_h */
 {
-	_putchar("_");
-	_putchar("p");
-	_putchar("u");
-	_putchar("t");
-	_putchar("c");
-	_putchar("h");
-	_putchar("a");
-	_putchar("r\n");
+	char *str = "_putchar";
+
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 
 	return (0);
 
