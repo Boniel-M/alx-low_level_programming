@@ -2,14 +2,14 @@
 
 /**
  * main - check the code
- *
+ * print: alphabet: print lowercase alphabet a - z.
  * Return: Always 0.
  */
 void print_alphabet(void)
 {
-    char ch;
+	char ch;
 
-    for (ch = 'a'; ch <= 'z'; ch++)
-	    _putchar(ch);
-    _putchar('\n');
+	for (ch = 'a'; ch <= 'z'; ch++)
+	       	_putchar(ch);
+	_putchar('\n');
 }
