@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - prints and checks alphabetical code
+ * main - entry point main
  *
- * Return: Returns 0 always.
+ * Return: Returns 0 always
  *
  *
  */
@@ -12,10 +12,9 @@ void print_alphabet(void)
 	char c;
 	c = 'a';
 
-	while (c <= 'z')
+	for (c = 'a'; a <= 'z'; c++)
 	{
 		_putchar(c);
-		c++;
 	}
 	_putchar('\n');
 	return (0);
