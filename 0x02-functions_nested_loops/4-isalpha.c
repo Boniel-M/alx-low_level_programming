@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * _isalpha.c - This function checks for alphabetical character
+ * _isalpha.c - This is function checks for alphabetical character.
  * @c: The character to be checked
  * Return: 1 for alphabets and 0 for anything else
  */
 
 int _isalpha(int c)
 
-{	
+{
 	if ((c >= 65 && c <= 97) || (c >= 97 && c <= 122))
 
 	{
