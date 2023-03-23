@@ -1,9 +1,12 @@
 #include <stdio.h>
 /**
- * main - prints the numbers from 1 to 100, followed by a new line.
- * But for multiples of three print Fizz instead of the number
- * and for the multiples of five print Buzz.
- * For numbers which are multiples of both three and five print FizzBupzz.
+ * main - Loop from 1 to 100
+ * Check if i is a multiple of both 3 and 5
+ * Check if i is a multiple of 3
+ * i is not a multiple of 3 or 5, so print it
+ * Print a newline character to separate the output
+ *
+Return 0 to indicate success
  *
  * Return: 0 always
  */
