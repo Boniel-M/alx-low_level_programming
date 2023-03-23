@@ -1,18 +1,28 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_numbers - prints the numbers, from 0 to 9
+ * print_square - prints squares
+ *
+ * @#: charcter prints squares
  *
  * Return: void
  */
 
-void print_numbers(void)
+void print_square(int size)
 {
-	int i;
+        int i, j;
 
-	for (i = 0; i <= 9; i++)
-	{
-		putchar(i + '0');
-	}
-	putchar('\n');
+        if (size <= 0)
+        {
+                putchar('\n');
+                return;
+        }
+        for (i = 0; i < size; i++)
+        {
+                for (j = 0; j < size; j++)
+                {
+                        putchar('#');
+                }
+                putchar('\n');
+        }
 }
