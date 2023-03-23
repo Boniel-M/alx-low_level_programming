@@ -2,12 +2,12 @@
 #include <stdio.h>
 /**
  * mul - multiplies two integers
- * @a: value for first integer
- * @b: value for second integer
+ * @a: first integer
+ * @b: second integer
+ * Return: product of a and b
  *
  */
 int mul(int a, int b)
 {
-	printf("%d\n", a * b);
-	return (0);
+	return (a * b);
 }
