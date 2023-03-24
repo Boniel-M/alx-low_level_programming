@@ -2,6 +2,7 @@
 #include <stdio.h>
 /**
  * print_square - prints squares
+ * @size:  is the size of the square
  *
  * @#: charcter prints squares
  *
