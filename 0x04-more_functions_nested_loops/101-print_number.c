@@ -1,11 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_number - Prints an integer to the console
- *
+ * print_number - Prints an integer
  * @n: integer parameter
  *
- * Return: void
+ * Return: 0 always
  */
 void print_number(int n)
 {
@@ -21,5 +20,5 @@ void print_number(int n)
 	{
 		print_number(i / 10);
 	}
-	_putchar((i % 10) + '0');
+	_putchar(i % 10 + '0');
 }
