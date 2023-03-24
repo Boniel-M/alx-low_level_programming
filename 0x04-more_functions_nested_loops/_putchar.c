@@ -1,28 +1,13 @@
-#include "main.h"
-#include <stdio.h>
+#include <unistd.h>
+
 /**
- * print_square - prints squares
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
  *
- * @#: charcter prints squares
- *
- * Return: void
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-
-void print_square(int size)
+int _putchar(char c)
 {
-        int i, j;
-
-        if (size <= 0)
-        {
-                putchar('\n');
-                return;
-        }
-        for (i = 0; i < size; i++)
-        {
-                for (j = 0; j < size; j++)
-                {
-                        putchar('#');
-                }
-                putchar('\n');
-        }
+	return (write(1, &c, 1));
 }
