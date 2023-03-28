@@ -1,6 +1,5 @@
-#include <limits.h>
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 /**
  * _atoi - converts string into integer
  * @s: character that points
@@ -9,29 +8,28 @@
  */
 int _atoi(char *s)
 {
-    int sign = 1;
-    int num = 0;
-    int digit;
+	int sign = 1;
+	int num = 0;
 
-    if (*s == '-') {
-        sign = -1;
-        s++;
-    }
-    else if (*s == '+') {
-        s++;
-    }
-
-    while (*s >= '0' && *s <= '9') {
-        digit = *s - '0';
-
-        if (num > INT_MAX / 10 || (num == INT_MAX / 10 && digit > INT_MAX % 10)) {
-            return sign == -1 ? INT_MIN : INT_MAX;
-        }
-
-        num = num * 10 + digit;
-        s++;
-    }
-
-    return sign * num;
+	while (*s != '\0')
+	{
+		if (*s == '-')
+		{
+			sign *= -1;
+		}
+		else if (*s == '+')
+		{
+			sign *= 1;
+		}
+		else if (*s >= '0' && *s <= '9')
+		{
+			num = num * 10 + (*s - '0');
+		}
+		else if (num > 0)
+		{
+			break;
+		}
+		s++;
+	}
+	return (sign * num);
 }
-
