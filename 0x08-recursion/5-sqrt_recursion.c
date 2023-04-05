@@ -5,6 +5,7 @@
  *
  * @n: input number
  * Return: -1 if a number does not have a natural square root
+ * @i: potential square root
  */
 int helper_sqrt(int n, int i);
 
@@ -20,7 +21,9 @@ int _sqrt_recursion(int n)
 }
 /**
  * helper_sqrt - finds the natural square root of a number recursively
+ *
  * @i: potential square root
+ *
  * @n: input number
  *
  * Return: squareroot of n or -1 if erro
