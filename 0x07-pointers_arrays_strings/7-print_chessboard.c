@@ -5,12 +5,11 @@
  * 2D array of characters
  *
  * @a: the 2D array of characters representing the chessboard
+ * Return: void
  */
-
 void print_chessboard(char (*a)[8])
 {
-	int j;
-	int i;
+	int i, j;
 
 	for (i = 0; i < 8; i++)
 	{
