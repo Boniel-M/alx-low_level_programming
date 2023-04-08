@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * print_chessboard - prints a chessboard from a
  * 2D array of characters
