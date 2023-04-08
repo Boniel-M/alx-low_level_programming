@@ -4,4 +4,4 @@
 gcc -c *.c
 #creates a libabry 
 
-ar rcs liball.a *.o
+ar -rcs liball.a *.o
