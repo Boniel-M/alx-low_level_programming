@@ -3,6 +3,8 @@
 #include <stdlib.h>
 /**
  * main - Entry point
+ * @argc: count and prints number of arguments
+ * @argv: prints arrays of arguments
  *
  * Return: 1 Error, 0 Sucess
  */
