@@ -4,10 +4,10 @@
 /**
  * main - entry point
  *
- * @argc: count arguments
- * @argv: array of arguments
+ * @argc: counts and prints arguments
+ * @argv: prints array of arguments
  *
- * Return: 1 error, 0 success
+ * Return: 0 Success, 1 Error
  *
  */
 int main(int argc, char *argv[])
