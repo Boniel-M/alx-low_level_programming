@@ -2,9 +2,11 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * function that prints its name
+ * main - Entry point
+ * @argc: prints number of arguments passed
+ * @argv: prints array of arguments passed
  *
- * Return: int 
+ * Return: 0 always
  *
  */
 int main(int argc, char *argv[])
