@@ -3,13 +3,13 @@
 #include "dog.h"
 #include <string.h>
 /**
- * new_dog - creates a new dog
+ * new_dog - creates a 
  *
  * @name: name of the dog
  * @age: age of the dog
  * @owner: owner of the dog
  *
- * Return: NULL if the function fails, else new_dog
+ * Return: a pointer to new dog_t object, or NULL if function fail
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
