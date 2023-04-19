@@ -1,12 +1,11 @@
 #include "function_pointers.h"
 #include <stdio.h>
 /**
- * array_iterator - applies a function to elements
+ * array_iterator - applies a function to each element of an array
  *
- * @size: size of array
- * @array: pointer to array
- * @action: function to be applied to each array
- *
+ * @array: pointer to the array
+ * @size: size of the array
+ * @action: pointer to the function to apply to the array elements
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
