@@ -1,7 +1,5 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
+#include <stdio.h>
 /**
  * print_list - prints all the elements of a list_t list
  * @h: pointer to the head of the list/node
