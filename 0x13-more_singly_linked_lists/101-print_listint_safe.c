@@ -1,34 +1,48 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
+#include <stdio.h>
 /**
- * print_listint_safe - prints a linked list of integers, handling loops
+ * print_listint_safe - Prints a listint_t linked list safely
  *
- * @head: pointer to the head of the linked list
+ * @head: A pointer to the head node of the linked list.
  *
- * Return: the number of nodes in the list
+ * Return: The number of nodes in the list.
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *turtle = head, *hare = head;
-	size_t count = 0;
+	const listint_t *slow, *fast;
+	size_t count;
 
-	while (turtle && hare && hare->next)
+	slow = head;
+	fast = head;
+	count = 0;
+
+	while (slow != NULL && fast != NULL && fast->next != NULL)
 	{
-		turtle = turtle->next;
-		hare = hare->next->next;
+		printf("[%p] %d\n", (void *)slow, slow->n);
+		count++;
+		slow = slow->next;
+		fast = fast->next->next;
 
-		if (turtle == hare)
+		if (slow == fast)
 		{
-			printf("-> [%p] %d\n", (void *)hare, hare->n);
+			printf("[%p] %d\n", (void *)slow, slow->n);
+			count++;
+
+			slow = head;
+			while (slow != fast)
+			{
+				printf("[%p] %d\n", (void *)slow, slow->n);
+				count++;
+				slow = slow->next;
+				fast = fast->next;
+			}
+			printf("-> [%p] %d\n", (void *)slow, slow->n);
 			break;
 		}
-		printf("[%p] %d\n", (void *)turtle, turtle->n);
-		count++;
 	}
-	if (!turtle || !hare || !hare->next)
+	if (slow != fast)
 	{
-		printf("[%p] %d\n", (void *)turtle, turtle->n);
+		printf("[%p] %d\n", (void *)slow, slow->n);
 		count++;
 	}
 	return (count);
