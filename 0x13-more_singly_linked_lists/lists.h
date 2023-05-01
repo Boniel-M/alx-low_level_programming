@@ -16,14 +16,6 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
-#include <stdlib.h>
-
-typedef struct listint_s
-{
-	int n;
-	struct listint_s *next;
-} listint_t;
-
 /* Function Prototype */
 
 int _putchar(char c);
