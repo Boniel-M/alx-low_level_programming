@@ -55,33 +55,3 @@ void read_elf_header(int fd)
 	}
 	print_elf_header(header);
 }
-/**
- * main - entry point for the ELF header program
- *
- * @argc: the number of command-line arguments
- * @argv: an array of pointers to the command-line arguments
- *
- * Return: 0 on success, 98 on failure
- */
-int main(int argc, char **argv)
-{
-	int fd;
-	if (argc != 2)
-	{
-		return (print_error("Usage: elf_header elf_filename"));
-	}
-
-	fd = open(argv[1], O_RDONLY);
-	if (fd == -1)
-	{
-		return (print_error("Failed to open file"));
-	}
-	if (lseek(fd, 0, SEEK_SET) == -1)
-	{
-		close(fd);
-		return (print_error("Failed to seek to beginning of file"));
-	}
-	read_elf_header(fd);
-	close(fd);
-	return (0);
-}
