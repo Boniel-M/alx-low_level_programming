@@ -1,64 +1,66 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <errno.h>
-
-#define BUF_SIZE 1024
-
+#include "main.h"
 /**
- * print_error - Prints an error message to stderr and returns the specified exit status.
+ * main - entry point for the program
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * @error_msg: the error message to display
- * @exit_status: the exit status to return
- *
- * Return: the specified exit status
+ * Return: 0 on success, non-zero on failure
  */
-int print_error(char *error_msg, int exit_status)
+int main(int argc, char *argv[])
 {
-    dprintf(STDERR_FILENO, "Error: %s\n", error_msg);
-    return exit_status;
+	int fd_from, fd_to;
+	ssize_t read_size, write_size;
+	char buffer[BUFFER_SIZE];
+	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+
+	if (argc != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+	fd_from = open(argv[1], O_RDONLY);
+
+	if (fd_from == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, mode);
+
+	if (fd_to == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
+	while ((read_size = read(fd_from, buffer, BUFFER_SIZE)) > 0)
+	{
+		write_size = write(fd_to, buffer, read_size);
+
+		if (write_size != read_size)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
+	}
+	if (read_size == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	if (close(fd_from) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
+		exit(100);
+	}
+	if (close(fd_to) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
+		exit(100);
+	}
+	return (0);
 }
-
-/**
- * main - Entry point
- *
- * @argc: the number of command-line arguments
- * @argv: the array of command-line arguments
- *
- * Return: 0 on success, or an error code on failure
- */
-int main(int argc, char **argv)
-{
-    int fd_from, fd_to, num_read, num_written;
-    char buf[BUF_SIZE];
-
-    if (argc != 3)
-        return print_error("Usage: cp file_from file_to", 97);
-
-    fd_from = open(argv[1], O_RDONLY);
-    if (fd_from == -1)
-        return print_error("Can't read from file", 98);
-
-    fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-    if (fd_to == -1)
-        return print_error("Can't write to file", 99);
-
-    while ((num_read = read(fd_from, buf, BUF_SIZE)) > 0)
-    {
-        num_written = write(fd_to, buf, num_read);
-        if (num_written != num_read)
-            return print_error("Can't write to file", 99);
-    }
-    if (num_read == -1)
-        return print_error("Can't read from file", 98);
-
-    if (close(fd_from) == -1)
-        return print_error("Can't close fd", 100);
-
-    if (close(fd_to) == -1)
-        return print_error("Can't close fd", 100);
-
-    return 0;
-}
-
