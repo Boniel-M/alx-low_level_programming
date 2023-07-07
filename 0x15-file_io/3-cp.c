@@ -1,8 +1,3 @@
-#include <unistd.h>
-#include <fcntl.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <errno.h>
 #include "main.h"
 /**
  * main - entry point for the program
