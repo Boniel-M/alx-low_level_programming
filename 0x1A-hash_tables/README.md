@@ -1,6 +1,6 @@
-#	0x1A. C - Hash tables
-#	Algorithm
+#	C - Hash tables
+#		Algorithm
 #		Data structure
-			Created by:
-				Boniel-M
-				bonielwanjohi@gmail.com	
+		Created by:
+			Boniel-M
+			bonielwanjohi@gmail.com
